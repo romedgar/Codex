@@ -17,6 +17,8 @@ import { UpdateModalComponent } from '../update-modal/update-modal.component';
 export class HomePage implements OnInit{
   public listaUnidades = []
   public units: Figuras[]
+  public unitById : Figuras
+
 
   constructor(private figureService:FigurasService, private router:Router, private modalCtrl: ModalController) {
     this.figureService.getAllUnits("Prueba").then(res => {
@@ -43,7 +45,17 @@ export class HomePage implements OnInit{
 
   }
 
-  async openModal(){
+  async openModal(id: string){
+     this.figureService.setSelectedUnit(id)
+
+    await this.figureService.getById("Prueba",id).then(res => {
+      res.subscribe(FiguraRef =>{
+           this.unitById = FiguraRef.data() as Figuras;
+        })
+      })
+
+     this.figureService.setSelectedUnitData(this.unitById)
+
     const modal = await this.modalCtrl.create({
       component: UpdateModalComponent
     });

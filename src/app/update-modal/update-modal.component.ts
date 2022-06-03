@@ -16,9 +16,26 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 export class UpdateModalComponent{
   public myForm:FormGroup;
   public unidad: Figuras;
+  public unidadAnterior:Figuras;
+  public id: string
 
 
-  constructor(private modalCtrl: ModalController,private figureService:FigurasService, private fb:FormBuilder) { }
+  constructor(private modalCtrl: ModalController,private figureService:FigurasService, private fb:FormBuilder) { 
+    this.unidadAnterior = this.figureService.getSelectedUnitData()
+
+    this.myForm = this.fb.group({
+      nombre: this.unidadAnterior.nombre,
+      movimiento: this.unidadAnterior.movimiento,
+      habilidad_combate: this.unidadAnterior.habilidad_combate,
+      habilidad_disparo: this.unidadAnterior.habilidad_disparo,
+      fuerza: this.unidadAnterior.fuerza,
+      dureza: this.unidadAnterior.dureza,
+      heridas: this.unidadAnterior.heridas,
+      ataques: this.unidadAnterior.ataques,
+      liderazgo: this.unidadAnterior.liderazgo,
+      salva: this.unidadAnterior.salva
+    });
+  }
 
   dismissModal() {
     this.modalCtrl.dismiss();
@@ -37,23 +54,18 @@ export class UpdateModalComponent{
       liderazgo: this.myForm.controls.liderazgo.value,
       salva: this.myForm.controls.salva.value
     }
-    
-    this.figureService.registerUnit(this.unidad,"Prueba")
+    this.id = this.figureService.getSelectedUnit()
+    this.figureService.update("Prueba",this.id,this.unidad)
+  }
+
+  eliminar(){
+    this.id = this.figureService.getSelectedUnit()
+    this.figureService.delete("Prueba",this.id)
   }
 
   ngOnInit() {
-    this.myForm = this.fb.group({
-      nombre: [""],
-      movimiento: [0],
-      habilidad_combate: [""],
-      habilidad_disparo: [""],
-      fuerza: [0],
-      dureza: [0],
-      heridas: [0],
-      ataques: [0],
-      liderazgo: [0],
-      salva: [""]
-    });
+
+    
   }
 
 }
