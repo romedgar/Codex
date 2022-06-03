@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "codex-a92f0": {
+      "hosting": {
+        "app": [
+          "codex-a92f0"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "codex-a92f0"
+  }
+}
