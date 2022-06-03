@@ -7,45 +7,47 @@
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
+  <form [formGroup]="myForm">
   <ion-item>
     <ion-label position="floating">Nombre de la Unidad</ion-label>
-    <ion-input></ion-input>
+    <ion-input formControlName="nombre"></ion-input>
   </ion-item>
     <ion-item>
       <ion-label position="floating">Ataque</ion-label>
-      <ion-input></ion-input>
+      <ion-input formControlName="ataques"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Dureza</ion-label>
-      <ion-input></ion-input>
+      <ion-input formControlName="dureza"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Fuerza</ion-label>
-      <ion-input></ion-input>
+      <ion-input formControlName="fuerza"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Habilidad Combate</ion-label>
-      <ion-input></ion-input>
+      <ion-input formControlName="habilidad_combate"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Habilidad Disparo</ion-label>
-      <ion-input></ion-input>
+      <ion-input formControlName="habilidad_disparo"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Heridas</ion-label>
-      <ion-input></ion-input>
+      <ion-input formControlName="heridas"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Liderazgo</ion-label>
-      <ion-input></ion-input>
+      <ion-input formControlName="liderazgo"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Movimiento</ion-label>
-      <ion-input></ion-input>
+      <ion-input formControlName="movimiento"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Salva</ion-label>
-      <ion-input></ion-input>
+      <ion-input formControlName="salva"></ion-input>
     </ion-item>
-  <ion-button expand="block" (click)="onUpdate()" class="ion-margin-top">Actualizar</ion-button>
+  <ion-button (click)="onUpdate()">Actualizar</ion-button>
+</form>
 </ion-content>

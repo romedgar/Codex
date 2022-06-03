@@ -42,6 +42,10 @@ const routes: Routes = [
     path: 'add-manual',
     loadChildren: () => import('./add-manual/add-manual.module').then( m => m.AddManualPageModule)
   },
+  {
+    path: 'mostrar-unidades',
+    loadChildren: () => import('./mostrar-unidades/mostrar-unidades.module').then( m => m.MostrarUnidadesPageModule)
+  },
 
 ];
 
