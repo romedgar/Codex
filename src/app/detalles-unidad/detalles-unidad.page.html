@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-tittle>{{unidad.nombre}}</ion-tittle>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-fab horizontal="end" vertical="top" slot="fixed" edge>
+  <ion-fab-button>
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list>
+    <ion-fab-button color="succes">
+      <ion-icon name="checkmark"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button color="warning">
+      <ion-icon name="close"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button color="danger">
+      <ion-icon name="trash"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
+<ion-card text-center>
+  <ion-card-header>
+    <ion-card-title>{{unidad.nombre}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-label>M</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>HC</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>HD</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>F</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>D</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>H</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>A</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>L</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>S</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>{{unidad.movimiento}}</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>{{unidad.habilidad_combate}}</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>{{unidad.habilidad_disparo}}</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>{{unidad.fuerza}}</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>{{unidad.dureza}}</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>{{unidad.heridas}}</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>{{unidad.ataques}}</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>{{unidad.liderazgo}}</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>{{unidad.salva}}</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>
+</ion-content>

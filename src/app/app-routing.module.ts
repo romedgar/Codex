@@ -32,14 +32,15 @@ const routes: Routes = [
   {
     path: 'forgot-password',
     loadChildren: () => import('./forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
-  },  {
-    path: 'add-unidades',
-    loadChildren: () => import('./add-unidades/add-unidades.module').then( m => m.AddUnidadesPageModule)
   },
   {
     path: 'add-manual',
     loadChildren: () => import('./add-manual/add-manual.module').then( m => m.AddManualPageModule)
+  },  {
+    path: 'detalles-unidad',
+    loadChildren: () => import('./detalles-unidad/detalles-unidad.module').then( m => m.DetallesUnidadPageModule)
   },
+
 
 ];
 

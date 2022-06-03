@@ -1,3 +1,11 @@
 ion-content {
-    background-color: #E9E1D6;
+    --ionic-background-color: #E9E1D6;
+}
+
+.Formulario {
+    --ionic-background-color: #C9D2DA;
+}
+
+.Formulario>ion-button{
+    --ionic-backgorund-color: #86A9B5;
 }
