@@ -46,7 +46,7 @@ export class AddManualPage implements OnInit {
       ataques: [0],
       liderazgo: [0],
       salva: [""]
-    })
+    });
   }
 
 }

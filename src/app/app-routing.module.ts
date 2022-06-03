@@ -13,6 +13,11 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'addManual',
+    redirectTo: 'add-manual',
+    pathMatch: 'full'
+  },
+  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
@@ -36,11 +41,7 @@ const routes: Routes = [
   {
     path: 'add-manual',
     loadChildren: () => import('./add-manual/add-manual.module').then( m => m.AddManualPageModule)
-  },  {
-    path: 'detalles-unidad',
-    loadChildren: () => import('./detalles-unidad/detalles-unidad.module').then( m => m.DetallesUnidadPageModule)
   },
-
 
 ];
 
