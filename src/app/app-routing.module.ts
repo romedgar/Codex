@@ -13,6 +13,11 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'addManual',
+    redirectTo: 'add-manual',
+    pathMatch: 'full'
+  },
+  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
@@ -32,9 +37,6 @@ const routes: Routes = [
   {
     path: 'forgot-password',
     loadChildren: () => import('./forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
-  },  {
-    path: 'add-unidades',
-    loadChildren: () => import('./add-unidades/add-unidades.module').then( m => m.AddUnidadesPageModule)
   },
   {
     path: 'add-manual',
