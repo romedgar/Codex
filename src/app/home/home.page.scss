@@ -21,7 +21,18 @@
 
   margin: 0;
 }
+.colorbtn{
+  background-color:#86A9B5;
+}
 
+ion-item{
+  --ion-background-color:#86A9B5;
+}
+ion-content{ --ion-background-color:#E9E1D6; }
+
+ion-toolbar {
+  --background: #E9E1D6;
+}
 #container a {
   text-decoration: none;
 }
