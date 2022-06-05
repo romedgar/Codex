@@ -45,6 +45,12 @@ export class HomePage implements OnInit{
 
   }
 
+  
+
+  nuevaUnidad(){
+    this.router.navigate(['add-manual']);
+  }
+
   async openModal(id: string){
      this.figureService.setSelectedUnit(id)
 

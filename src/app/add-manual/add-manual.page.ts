@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Figuras } from 'src/app/models/figuras';
 import { FigurasService } from 'src/app/services/figuras.service';
+import { Router, NavigationExtras } from '@angular/router';
 
 import { FormGroup, FormBuilder } from '@angular/forms';
 
@@ -15,7 +16,7 @@ export class AddManualPage implements OnInit {
   public myForm:FormGroup;
   public unidad: Figuras;
 
-  constructor(private figureService:FigurasService, private fb:FormBuilder) { }
+  constructor(private figureService:FigurasService, private fb:FormBuilder,private router:Router) { }
 
   altaUnidad(){
     this.unidad = {
@@ -32,6 +33,10 @@ export class AddManualPage implements OnInit {
     }
     
     this.figureService.registerUnit(this.unidad,"Prueba")
+  }
+
+  regresar(){
+    this.router.navigate(['home']);
   }
 
   ngOnInit() {

@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -40,11 +40,13 @@ const routes: Routes = [
   },
   {
     path: 'add-manual',
-    loadChildren: () => import('./add-manual/add-manual.module').then( m => m.AddManualPageModule)
+    loadChildren: () => import('./add-manual/add-manual.module').then( m => m.AddManualPageModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'mostrar-unidades',
-    loadChildren: () => import('./mostrar-unidades/mostrar-unidades.module').then( m => m.MostrarUnidadesPageModule)
+    loadChildren: () => import('./mostrar-unidades/mostrar-unidades.module').then( m => m.MostrarUnidadesPageModule),
+    canActivate: [AuthGuard],
   },
 
 ];
