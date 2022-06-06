@@ -9,22 +9,20 @@ import { Router, NavigationExtras } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { SelModalComponent } from '../sel-modal/sel-modal.component';
 
-
 @Component({
-  selector: 'app-admin',
-  templateUrl: './admin.page.html',
-  styleUrls: ['./admin.page.scss'],
+  selector: 'app-arqueros',
+  templateUrl: './arqueros.page.html',
+  styleUrls: ['./arqueros.page.scss'],
 })
-export class AdminPage implements OnInit {
+export class ArquerosPage implements OnInit {
   public listaUnidades = []
   public units: Figuras[]
   public unitById : Figuras
   public cat: string
 
-
   constructor(private figureService:FigurasService, private router:Router, private modalCtrl: ModalController) {
     this.cat = figureService.getSelectedCategory()
-    this.figureService.getAllUnits("mago").then(res => {
+    this.figureService.getAllUnits("arquero").then(res => {
       res.subscribe(listaFigurasRef =>{
         this.units = listaFigurasRef.map(unidadRef =>{
           let unidad=unidadRef.payload.doc.data();
@@ -59,7 +57,7 @@ export class AdminPage implements OnInit {
      this.figureService.setSelectedUnit(id)
      console.log(id)
 
-    await this.figureService.getById("mago",id).then(res => {
+    await this.figureService.getById("arquero",id).then(res => {
       res.subscribe(FiguraRef =>{
            this.unitById = FiguraRef.data() as Figuras;
         })

@@ -8,6 +8,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router, NavigationExtras } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { UpdateModalComponent } from '../update-modal/update-modal.component';
+import { AddpreModalComponent } from '../addpre-modal/addpre-modal.component';
 
 @Component({
   selector: 'app-home',
@@ -51,6 +52,14 @@ export class HomePage implements OnInit{
     this.router.navigate(['/add-manual']);
   }
 
+  async nuevaUnidadPre(){
+    const modal = await this.modalCtrl.create({
+      component: AddpreModalComponent
+    });
+
+    await modal.present();
+  }
+
   async openModal(id: string){
      this.figureService.setSelectedUnit(id)
 
@@ -59,7 +68,7 @@ export class HomePage implements OnInit{
            this.unitById = FiguraRef.data() as Figuras;
         })
       })
-
+      console.log(this.unitById)
      this.figureService.setSelectedUnitData(this.unitById)
 
     const modal = await this.modalCtrl.create({

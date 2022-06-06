@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Figuras } from 'src/app/models/figuras';
 import { FigurasService } from 'src/app/services/figuras.service';
 
@@ -9,13 +8,12 @@ import { Router, NavigationExtras } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { SelModalComponent } from '../sel-modal/sel-modal.component';
 
-
 @Component({
-  selector: 'app-admin',
-  templateUrl: './admin.page.html',
-  styleUrls: ['./admin.page.scss'],
+  selector: 'app-soporte',
+  templateUrl: './soporte.page.html',
+  styleUrls: ['./soporte.page.scss'],
 })
-export class AdminPage implements OnInit {
+export class SoportePage implements OnInit {
   public listaUnidades = []
   public units: Figuras[]
   public unitById : Figuras
@@ -24,7 +22,7 @@ export class AdminPage implements OnInit {
 
   constructor(private figureService:FigurasService, private router:Router, private modalCtrl: ModalController) {
     this.cat = figureService.getSelectedCategory()
-    this.figureService.getAllUnits("mago").then(res => {
+    this.figureService.getAllUnits("soporte").then(res => {
       res.subscribe(listaFigurasRef =>{
         this.units = listaFigurasRef.map(unidadRef =>{
           let unidad=unidadRef.payload.doc.data();
@@ -59,7 +57,7 @@ export class AdminPage implements OnInit {
      this.figureService.setSelectedUnit(id)
      console.log(id)
 
-    await this.figureService.getById("mago",id).then(res => {
+    await this.figureService.getById("soporte",id).then(res => {
       res.subscribe(FiguraRef =>{
            this.unitById = FiguraRef.data() as Figuras;
         })

@@ -8,6 +8,7 @@ import { Figuras } from '../models/figuras';
 })
 export class FigurasService {
   private unidadSeleccionada: string
+  private categoriaSeleccionada: string
   private unidadData: Figuras
 
   constructor(private firestore:AngularFirestore) { }
@@ -60,12 +61,20 @@ export class FigurasService {
     return this.unidadData;
   }
 
+  public getSelectedCategory(){
+    return this.categoriaSeleccionada;
+  }
+
   public setSelectedUnitData(unidadData:Figuras){
     this.unidadData = unidadData;
   }
 
   public setSelectedUnit(id:string){
     this.unidadSeleccionada = id;
+  }
+
+  public setSelectedCategory(categoria:string){
+    this.unidadSeleccionada = categoria;
   }
 }
 

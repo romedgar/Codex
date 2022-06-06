@@ -4,9 +4,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AdminPageRoutingModule } from './admin-routing.module';
+import { AsesinosPageRoutingModule } from './asesinos-routing.module';
 
-import { AdminPage } from './admin.page';
+import { AsesinosPage } from './asesinos.page';
 import { SelModalComponent } from '../sel-modal/sel-modal.component';
 
 @NgModule({
@@ -15,9 +15,9 @@ import { SelModalComponent } from '../sel-modal/sel-modal.component';
     FormsModule,
     ReactiveFormsModule,
     IonicModule,
-    AdminPageRoutingModule
+    AsesinosPageRoutingModule
   ],
-  declarations: [AdminPage, SelModalComponent],
+  declarations: [AsesinosPage, SelModalComponent],
   entryComponents: [SelModalComponent]
 })
-export class AdminPageModule {}
+export class AsesinosPageModule {}

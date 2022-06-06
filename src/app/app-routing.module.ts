@@ -47,6 +47,22 @@ const routes: Routes = [
     loadChildren: () => import('./mostrar-unidades/mostrar-unidades.module').then( m => m.MostrarUnidadesPageModule),
     canActivate: [AuthGuard]
   },
+  {
+    path: 'guerreros',
+    loadChildren: () => import('./guerreros/guerreros.module').then( m => m.GuerrerosPageModule)
+  },
+  {
+    path: 'soporte',
+    loadChildren: () => import('./soporte/soporte.module').then( m => m.SoportePageModule)
+  },
+  {
+    path: 'arqueros',
+    loadChildren: () => import('./arqueros/arqueros.module').then( m => m.ArquerosPageModule)
+  },
+  {
+    path: 'asesinos',
+    loadChildren: () => import('./asesinos/asesinos.module').then( m => m.AsesinosPageModule)
+  },
 
 ];
 
