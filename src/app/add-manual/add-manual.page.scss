@@ -9,6 +9,9 @@ ion-content {
 .Formulario>ion-button{
     --ionic-backgorund-color: #86A9B5;
 }
+.Formulario>ion-item>ion-input{
+    --ionic-background-color: #7eadd5;
+}
 form{
     background-color: #C9D2DA;
 }

@@ -7,19 +7,68 @@
 <ion-content [fullscreen]="true">
   <div class="Formulario">
     <form [formGroup]="myForm">
-      <ion-input placeholder="Ingresa el Nombre" formControlName="nombre"></ion-input>
-      <ion-input placeholder="Ingresa el Ataque" formControlName="ataques"></ion-input>
-      <ion-input placeholder="Ingresa la Dureza" formControlName="dureza"></ion-input>
-      <ion-input placeholder="Ingresa la Fuerza" formControlName="fuerza"></ion-input>
-      <ion-input placeholder="Ingresa Habilidad de Combate" formControlName="habilidad_combate"></ion-input>
-      <ion-input placeholder="Ingresa Habilidad de Disparo" formControlName="habilidad_disparo"></ion-input>
-      <ion-input placeholder="Ingresa Heridas" formControlName="heridas"></ion-input>
-      <ion-input placeholder="Ingresa Liderazgo" formControlName="liderazgo"></ion-input>
-      <ion-input placeholder="Ingresa el Movimiento" formControlName="movimiento"></ion-input>
-      <ion-input placeholder="Ingresa la Salva" formControlName="salva"></ion-input>
+      <ion-item>
+        <ion-label position="floating">
+          Nombre
+        </ion-label>
+        <ion-input placeholder="Ingresa el Nombre" formControlName="nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">
+          Ataque
+        </ion-label>
+        <ion-input placeholder="Ingresa el Ataque" formControlName="ataques"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">
+          Dureza
+        </ion-label>
+        <ion-input placeholder="Ingresa la Dureza" formControlName="dureza"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">
+          Fuerza
+        </ion-label>
+        <ion-input placeholder="Ingresa la Fuerza" formControlName="fuerza"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">
+          Habilidad de Combate
+        </ion-label>
+        <ion-input placeholder="Ingresa Habilidad de Combate" formControlName="habilidad_combate"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">
+          Habilidad de Disparo
+        </ion-label>
+        <ion-input placeholder="Ingresa Habilidad de Disparo" formControlName="habilidad_disparo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">
+          Heridas
+        </ion-label>
+        <ion-input placeholder="Ingresa Heridas" formControlName="heridas"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">
+          Liderazgo
+        </ion-label>
+        <ion-input placeholder="Ingresa Liderazgo" formControlName="liderazgo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">
+          Movimiento
+        </ion-label>
+        <ion-input placeholder="Ingresa el Movimiento" formControlName="movimiento"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">
+          Salva
+        </ion-label>
+        <ion-input placeholder="Ingresa la Salva" formControlName="salva"></ion-input>
+      </ion-item>
       <ion-button (click) = "altaUnidad()">Alta Unidad</ion-button>
       <ion-button color="medium" (click)="regresar()">Regresar</ion-button>
     </form>
   </div>
-  
 </ion-content>
