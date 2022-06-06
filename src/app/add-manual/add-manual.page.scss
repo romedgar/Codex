@@ -1,11 +1,14 @@
 ion-content {
-    --ionic-background-color: #E9E1D6;
+    --ionic-background-color: #c5a476;
 }
 
 .Formulario {
-    --ionic-background-color: #C9D2DA;
+    --ionic-background-color: #7eadd5;
 }
 
 .Formulario>ion-button{
     --ionic-backgorund-color: #86A9B5;
 }
+ion-toolbar {
+    --background: #E9E1D6;
+  }

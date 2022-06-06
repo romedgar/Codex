@@ -5,41 +5,66 @@
 </ion-header>
 
 <ion-content>
-  <form>
-    <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" #email required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" #password required></ion-input>
-    </ion-item>
-    <ion-row>
-      <ion-col>
-        <ion-button type="submit" (click)="onLogin(email, password)" expand="block">Login</ion-button>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <p class="ion-text-end">
-          <a routerLink="/forgot-password">Olvidaste la contraseña? </a>
-        </p>
-      </ion-col>
-    </ion-row>
-    <span class="center-span"> or </span>
-    <ion-row>
-      <ion-col>
-        <ion-button type="submit" color="danger" (click)="onLoginGoogle()" expand="block"
-          >Login con Google
+
+  <ion-grid class="grid1">
+  
+      <ion-row class="row1">
+          <ion-col>
+  
+          </ion-col>
+      </ion-row>
+  
+      <ion-row class="row2">
+          <ion-col>
+  
+          </ion-col>
+      </ion-row>
+  
+  </ion-grid>
+  
+  <ion-slide>
+      <div class="contaier-login">
+          <ion-grid>
+              <ion-row>
+                  <ion-col>
+                      <h1>Iniciar sesión</h1>
+                  </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                      <ion-list>
+  
+                          <ion-item>
+                              <ion-icon name="person" class="icon-login"></ion-icon>
+                              <ion-input  #email required name="user" type="text" required placeholder="Correo"></ion-input>
+                          </ion-item>
+                          <br />
+                          <ion-item>
+                              <ion-icon name="lock" class="icon-login"></ion-icon>
+                              <ion-input #password required name="password" type="password" required placeholder="Contraseña"></ion-input>
+                          </ion-item>
+  
+                      </ion-list>
+                  </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                    <ion-button type="submit" (click)="onLogin(email, password)" expand="block">Entrar</ion-button>
+                      <ion-button type="submit" color="secondary" (click)="onLoginGoogle()" expand="block"
+          >Entrar con Google
         </ion-button>
-      </ion-col>
-    </ion-row>
-  </form>
-  <ion-row>
-    <ion-col>
-      <p class="ion-text-end">
-        <a routerLink="/register">Crear una Cuenta</a>
-      </p>
-    </ion-col>
-  </ion-row>
-</ion-content>
+                  </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <p class="ion-text-end">
+                    <a routerLink="/forgot-password">¿Olvidó la contraseña? </a>
+                  </p>
+                  <p class="ion-text-end">
+                    <a routerLink="/register">Crear una cuenta</a>
+                  </p>
+                </ion-col>
+              </ion-row>
+          </ion-grid>
+      </div>
+  </ion-slide>
