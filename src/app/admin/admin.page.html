@@ -1,9 +1,66 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>admin</ion-title>
+    <ion-title>
+      Lista de unidades
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content [fullscreen]="true">
+  <ion-list class="colorbtn">
+    <ion-card *ngFor = "let unit of units" button (click)="openModal(unit.id)">
+      <ion-card-header>
+        <ion-card-title>{{unit.nombre}}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        Detalles de la Unidad
+      </ion-card-content>
+      <ion-item>
+      <ion-item>
+        <ion-icon name="footsteps-outline" slot="start"></ion-icon>
+        <ion-label>Movimiento: {{unit.movimiento}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="skull-outline" slot="start"></ion-icon>
+        <ion-label>Habilidad de Combate: {{unit.habilidad_combate}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="game-controller-outline" slot="start"></ion-icon>
+        <ion-label>Habilidad de Disparo: {{unit.habilidad_disparo}}</ion-label>
+      </ion-item>
+    </ion-item>
+    <ion-item>
+      <ion-item>
+        <ion-icon name="shapes-outline" slot="start"></ion-icon>
+        <ion-label>Fuerza: {{unit.fuerza}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="prism-outline" slot="start"></ion-icon>
+        <ion-label>Dureza: {{unit.dureza}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="heart-dislike-outline" slot="start"></ion-icon>
+        <ion-label>Heridas: {{unit.heridas}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="flash-outline" slot="start"></ion-icon>
+        <ion-label>Ataque: {{unit.ataques}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="people-circle-outline" slot="start"></ion-icon>
+        <ion-label>Liderazgo: {{unit.liderazgo}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="heart-half-outline" slot="start"></ion-icon>
+        <ion-label>Salva: {{unit.salva}}</ion-label>
+      </ion-item>
+    </ion-item>
+    </ion-card>
+  </ion-list>
+  <ion-button color="medium" (click) = "nuevaUnidad()">Agregar Unidad Manualmente</ion-button>
+  <ion-button color="medium" (click) = "nuevaUnidad()">Agregar Unidad Predefinida</ion-button>
 </ion-content>
+
+
+

@@ -28,7 +28,7 @@ const routes: Routes = [
   {
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule),
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuard]
   },
   {
     path: 'verify-email',
@@ -40,13 +40,12 @@ const routes: Routes = [
   },
   {
     path: 'add-manual',
-    loadChildren: () => import('./add-manual/add-manual.module').then( m => m.AddManualPageModule),
-    canActivate: [AuthGuard],
+    loadChildren: () => import('./add-manual/add-manual.module').then( m => m.AddManualPageModule)
   },
   {
     path: 'mostrar-unidades',
     loadChildren: () => import('./mostrar-unidades/mostrar-unidades.module').then( m => m.MostrarUnidadesPageModule),
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuard]
   },
 
 ];
